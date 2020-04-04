@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeCard renders 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3 MuiGrid-grid-md-2"
+>
+  <div
+    className="MuiPaper-root MuiCard-root makeStyles-card-3 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      className="MuiCardContent-root makeStyles-cardLink-1"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+        >
+          <h6
+            className="MuiTypography-root MuiTypography-subtitle2"
+          >
+            Julia Mullen
+          </h6>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-circle makeStyles-cardAvatar-2"
+          >
+            <img
+              alt="Julia Mullen"
+              className="MuiAvatar-img"
+              src="https://lh3.googleusercontent.com/a-/AOh14Gh2ByGt5g0PjODCq4pxCB8VVPRJnGAmPQ8Utwr7"
+            />
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            Indian Shrimp Curry
+          </h5>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        />
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+        >
+          <p>
+            1/2
+             
+            sweet onion, minced
+          </p>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

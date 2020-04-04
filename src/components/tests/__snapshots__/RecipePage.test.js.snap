@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipePage renders 1`] = `
+<div
+  className="MuiPaper-root makeStyles-recipePage-1 MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <div
+    className="MuiAvatar-root MuiAvatar-circle makeStyles-avatar-5"
+  >
+    <img
+      alt="Julia Mullen"
+      className="MuiAvatar-img"
+      src="https://lh3.googleusercontent.com/a-/AOh14Gh2ByGt5g0PjODCq4pxCB8VVPRJnGAmPQ8Utwr7"
+    />
+  </div>
+  <h3
+    className="MuiTypography-root makeStyles-title-2 MuiTypography-h3"
+  >
+    Indian Shrimp Curry
+  </h3>
+  <h6
+    className="MuiTypography-root MuiTypography-subtitle2"
+  >
+    By: 
+    Julia Mullen
+  </h6>
+  <p
+    className="MuiTypography-root makeStyles-description-4 MuiTypography-body2"
+  >
+    This is a subtle yet richly flavored curry that complements shrimp perfectly. A very authentic taste, and a very easy meal to prepare when you are in a hurry. Make sure you pop the shrimp tails off before adding to skillet. Serve with rice.
+  </p>
+  <p
+    className="MuiTypography-root makeStyles-anecdote-3 MuiTypography-body1"
+  >
+    I love making this when I have a craving for shrimp. Use Indian-style chile powder or ground red chiles for this recipe, not the Mexican spice blend!
+  </p>
+  <hr />
+  <h4
+    className="MuiTypography-root MuiTypography-h4"
+  >
+    Ingredients
+  </h4>
+  <p>
+    1/2
+     
+    sweet onion, minced
+  </p>
+  <p>
+    2 cloves
+     
+    garlic
+  </p>
+  <p>
+    1 tsp
+     
+    ground ginger
+  </p>
+  <p>
+    1 tsp
+     
+    ground cumin
+  </p>
+  <p>
+    1 1/2 tsp
+     
+    ground turmeric
+  </p>
+  <p>
+    1 tsp
+     
+    paprika
+  </p>
+  <p>
+    1/2 tsp
+     
+    red chili powder
+  </p>
+  <p>
+    14.5 oz
+     
+    chopped tomatoes
+  </p>
+  <p>
+    14 oz
+     
+    coconut milk
+  </p>
+  <p>
+    1 tsp
+     
+    salt
+  </p>
+  <p>
+    1 lb
+     
+    cooked and peeled shrimp
+  </p>
+  <p>
+    2 tbsp
+     
+    chopped fresh cilantro
+  </p>
+  <p>
+    2 tbsp
+     
+    peanut oil
+  </p>
+  <h4
+    className="MuiTypography-root MuiTypography-h4"
+  >
+    Steps
+  </h4>
+  <p>
+    Cook the mixture at a simmer, stirring occasionally, about 10 minutes. Stir the shrimp, fresh cilantro, and dried cilantro into the sauce mixture; cook another 1 minute before serving.
+  </p>
+</div>
+`;

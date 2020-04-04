@@ -16,76 +16,87 @@ import Link from "next/link"
 
 const useStyles = makeStyles({
   root: {
-    //background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     flexGrow: 1,
   },
-   home: {
-     flexGrow: 1,
-   }
+  spacer: {
+    flexGrow: 1,
+  },
+  home: {
+    fontFamily: 'cursive',
+    cursor: "pointer",
+    '&:hover': {
+      color:"white"
+    }
+  },
+  icon: {
+    marginLeft: '20px',
+    cursor: "pointer",
+  },
+  menuLink: {
+    textDecoration: "none",
+    color: 'black',
+  }
 })
 
 export default function Navbar({ user }) {
-	const [anchorEl, setAnchorEl] = React.useState(null);
-	const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
   const classes = useStyles()
 
-	const handleMenu = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-	return (
-		<AppBar position="static" className={classes.root}>
-			<Toolbar>
-				<Link href="/"><Typography variant="h4" edge="start" className={classes.home} aria-label="home">Recipes</Typography></Link>
+  return (
+    <AppBar position="static" className={classes.root}>
+      <Toolbar>
+        <Link href="/"><Typography variant="h4" edge="start" className={ classes.home } aria-label="home">Recipes</Typography></Link>
+        <div className={ classes.spacer }></div>
         <Link href="/create-recipe"><Button variant="contained" color="secondary"><PostAddSharpIcon/> Make new recipe</Button></Link>
-        
-        {user && (
-              <Avatar src={user.picture} alt={user.displayName} aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu} color="inherit" />
-          )}
 
-        {!user && (
-          <IconButton aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu} color="inherit" >
-					<AccountCircle />
-        </IconButton>
+        {user && (
+          <Avatar src={user.picture} alt={user.displayName} aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu} color="inherit" className={ classes.icon }/>
         )}
 
-				<Menu
-					id="menu-appbar"
-					anchorEl={anchorEl}
-					anchorOrigin={{
-						vertical: 'top',
-						horizontal: 'right',
-					}}
-					keepMounted
-					transformOrigin={{
-						vertical: 'top',
-						horizontal: 'right',
-					}}
-					open={open}
-					onClose={handleClose}
-				>
+        {!user && (
+          <IconButton aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu} color="inherit" className={ classes.icon }>
+            <AccountCircle />
+          </IconButton>
+        )}
 
-					{user && (
-            <div>
-							<Link href="/profile">
-								<MenuItem onClick={handleClose}>Profile</MenuItem>
-							</Link>
-							<Link href="/logout">
-								<MenuItem onClick={handleClose}>Log Out</MenuItem>
-							</Link>
-            </div>
-					)}
+        <Menu
+          id="menu-appbar"
+          anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={open}
+          onClose={handleClose}
+        >
 
-					{!user && (
-						<Link href="/login">
-							<MenuItem onClick={handleClose}>Log In</MenuItem>
-						</Link>
-					)}
-				</Menu>
-			</Toolbar>
-		</AppBar>
-	)}
+        {user && (
+          <div>
+
+            <MenuItem onClick={handleClose}><Link href="/profile"><a className={classes.menuLink}>Profile</a></Link></MenuItem>
+            <MenuItem onClick={handleClose}><Link href="/logout"><a className={classes.menuLink}>Log Out</a></Link></MenuItem>
+          </div>
+        )}
+
+        {!user && (
+
+          <MenuItem onClick={handleClose}><Link href="/login"><a className={classes.menuLink}>Log In</a></Link></MenuItem>
+        )}
+      </Menu>
+    </Toolbar>
+  </AppBar>
+  )}
